@@ -2,7 +2,7 @@
 def main():
     frank_path = "books/frankenstein.txt"
     frank_contents = get_book(frank_path)
-    frank_wordcount = book_wordcount(frank_contents)
+    frank_wordcount = get_book_wordcount(frank_contents)
     # print(frank_wordcount)
     frank_char_count = get_char_count(frank_contents)
     sorted_char_list = sort_char_count(frank_char_count)
@@ -17,7 +17,7 @@ def get_book(path):
         file_contents = f.read()
     return file_contents
 
-def book_wordcount(book_string):
+def get_book_wordcount(book_string):
     words = book_string.split()
     count = len(words)
     return count 
